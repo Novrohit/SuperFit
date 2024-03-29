@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://127.0.0.1:5500/.vscode/gym.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperFit - Your Ultimate Fitness Destination</title>
+    <link rel="stylesheet" href="./SuperFit - Your Ultimate Fitness Destination_files/css2">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Basic styles Body k liye use kiya hu*/
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Header k liye Style yeha use liya hu */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .superfit {
+            font-family: 'Poppins', sans-serif;
+            font-size: 42px;
+            color: #ffffff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); 
+        }
+
+        .super {
+            font-weight: bold;
+        }
+
+        .fit {
+            font-weight: normal;
+            color: #ff5722;
+        }
+        .footer-left {
+            font-size: 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        }
+        
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            transition: color 0.3s; 
+        }
+        
+        nav ul li a:hover {
+            color: #ff5722; 
+        }
+        
+        /* Yeha top section k liye Css use kiya hu */
+        .top {
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .top h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .top p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #ff5722;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .btn:hover {
+            background-color: #ff7043;
+        }
+        
+        /* yeha bosy aur form k liye css use kiya hu */
+        .classes, .body-Section, .form-section {
+            padding: 50px;
+            text-align: left;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            background-color: transparent; 
+            width: 30%; 
+            float: left; 
+        }
+        
+        .about h2, .classes h2, .body-Section h2, .form-section h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-decoration: underline; 
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .about p, .classes p, .body-Section p, .form-section p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .class {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .class h3 {
+            margin-bottom: 10px;
+        }
+
+        .class p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 18px; 
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #333333;
+            font-size: 20px; 
+        }
+
+        .form-group input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            background-color: #ff5722;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px; 
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px; 
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #ff7043;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            clear: both; 
+        }
+
+        /* Additional styles */
+        .body-Section {
+            width: 25%;
+            margin-left: 5%;
+        }
+
+        /* Center alignment for the form section */
+        .form-section.centered {
+            text-align: center;
+            width: 50%; 
+            margin: 0 25%; 
+            border: 1px solid #ffffff; 
+            padding: 30px; 
+            border-radius: 10px; 
+        }
+
+        /* Footer k liye styles use kiya hu */
+        footer p {
+            float: left; 
+        }
+
+        .footer-center {
+            display: inline-block; 
+            margin: 0 auto; 
+            text-align: center; 
+        }
+
+        .footer-right {
+            float: right; 
+            margin-top: 5px; 
+        }
+
+        .footer-right img {
+            height: 30px; 
+            margin-right: 5px; 
+            vertical-align: middle; 
+        }
+
+        /* Hover effect */
+        h2:hover {
+            color: #ff5722; 
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span class="superfit"><span class="super">Super</span><span class="fit">Fit</span></span></h1>
+        <nav>
+            <ul class="footer-left">
+                <li><a href="http://127.0.0.1:5500/.vscode/gym.html#">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/.vscode/gym.html#">Classes</a></li>
+                <li><a href="http://127.0.0.1:5500/.vscode/gym.html#">Contact</a></li>
+                <li><a href="http://127.0.0.1:5500/.vscode/gym.html#">Login</a></li>
+                <li><a href="http://127.0.0.1:5500/.vscode/gym.html#">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Yeh top introduction Section hai -->
+    <div class="top">
+        <h2>Welcome to SuperFit</h2>
+        <p>Your journey to fitness starts here!</p>
+        <a href="http://127.0.0.1:5500/.vscode/gym.html#" class="btn">Get Started</a>
+    </div>
+    <!-- Yeh body Section Hai -->
+    <section class="body-Section">
+        <h2>About Us</h2>
+        <p>SuperFit is your ultimate destination for achieving your fitness goals. We provide a wide range of fitness classes and personalized training programs to help you lead a healthier lifestyle.</p>
+    </section>
+
+    <section class="body-Section">
+        <h2>Virtual Tour</h2>
+        <p>Step inside SuperFit from the comfort of your home with our virtual tour. Explore our state-of-the-art facilities, cutting-edge equipment, and vibrant workout spaces to see where your fitness journey begins.</p>
+    </section>
+
+    <section class="body-Section">
+        <h2>Nutrition Guides</h2>
+        <p>Fuel your body for success with our comprehensive nutrition guides. Whether you're looking to build muscle, shed pounds, or optimize performance, our expert tips and meal plans will help you achieve your goals while enjoying delicious and nutritious meals.</p>
+    </section>
+
+    <section class="body-Section">
+        <h2>Events Calendar</h2>
+        <p>Stay up-to-date with all the exciting happenings at SuperFit with our events calendar. From fitness workshops and guest speaker events to member appreciation days and challenges, there's always something exciting on the horizon.</p>
+    </section>
+
+    <section class="body-Section">
+        <h2>Online Coaching</h2>
+        <p>Elevate your fitness journey with personalized online coaching from our certified trainers. Whether you're seeking accountability, guidance, or tailored workout programs, our virtual coaching sessions will empower you to reach new heights in your fitness journey.</p>
+    </section>
+
+    <section class="body-Section">
+        <h2>Community Forum</h2>
+        <p>Join the SuperFit community and connect with like-minded individuals in our online forum. Share tips, ask questions, and celebrate victories together as you embark on your fitness journey surrounded by a supportive and inspiring community.</p>
+    </section>
+
+    <!-- Yeh form section hai -->
+    <section class="form-section centered">
+        <h2 style="font-size: 35px;">Receive Your Free Trial Pass</h2>
+        <form>
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" required="">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" required="">
+            </div>
+            <div class="form-group">
+                <label for="contact">Mobile Number</label>
+                <input type="tel" id="contact" name="contact" required="">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required="">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+     <!-- Yeha se footer start ho raha hai  -->
+    <footer>
+        <p>© 2022 SuperFit. All rights reserved.</p>
+        <div class="footer-center">
+            <p>Design By <b>Rohit Kumar </b></p>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.instagram.com/nov_rohit"><img src="./SuperFit - Your Ultimate Fitness Destination_files/Instagram_icon.png" alt="Instagram Logo"></a>
+            <span>@nov_rohit</span>
+        </div>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
